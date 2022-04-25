@@ -131,7 +131,7 @@ display: none;
   grid-row: 2/3;
   display: contents;
 }
-.envase .imagenes {
+/* .envase .imagenes {
   grid-row: 3/4;
   display: inline-block;
   max-height: 100%;
@@ -140,8 +140,8 @@ display: none;
   grid-row: 4/5;
   display: contents;
   max-height: 100%;
-}
-.envase .imagenes .imagen1,
+} */
+/* .envase .imagenes .imagen1,
 .envase .imagenes .imagen2,
 .envase .imagenes .imagen3,
 .envaseProductos .imagenes .imagen1,
@@ -149,7 +149,7 @@ display: none;
 .envaseProductos .imagenes .imagen3 {
   width: 300px;
   height: 250px;
-}
+} */
 h2 {
   grid-row: 3/4;
   display: flex;
@@ -199,12 +199,12 @@ h1 {
   margin-bottom: 3%;
   text-align: inherit;
 }
-.imagenes {
+/* .imagenes {
   display: flex;
   gap: 1px;
   flex-wrap: wrap;
-}
-.imagenes .imagen1 {
+} */
+/* .imagenes .imagen1 {
   grid-column: 1/2;
 }
 .imagenes .imagen2 {
@@ -212,20 +212,20 @@ h1 {
 }
 .imagenes .imagen3 {
   grid-column: 3/4;
-}
+} */
 .pie {
   grid-row: 4/5;
   display: flex;
-  margin-top: 60px;
   justify-content: center;
-  margin-bottom: 60px;
   color: aliceblue;
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .pieContacto {
   grid-column: 1/4;
   grid-row: 3/4;
   display: flex;
-  margin-top: 7%;
   justify-content: center;
 }
 .pieDegustaciones {
@@ -235,13 +235,13 @@ h1 {
   text-align: center;
   margin-top: 40px;
 }
-.envaseDegustaciones {
+/* .envaseDegustaciones {
   display: grid;
   grid-template-columns: 0.3 fr 0.5fr 0.3fr;
   grid-template-rows: 0.8fr 0.5fr 0.2fr;
   gap: 5px;
   margin-right: 50px;
-}
+} */
 .envaseDegustaciones .header {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -249,12 +249,12 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
-.menuDegustaciones {
+/* .menuDegustaciones {
   grid-column: 1/2;
   grid-row: 2/3;
   margin-top: 15px;
   height: fit-content;
-}
+} */
 .menuDegustaciones li:hover {
   transition: 1s;
   background-color: brown;
@@ -265,7 +265,7 @@ h1 {
 h2 {
   color: aliceblue;
   font-size: xx-large;
-  margin-bottom: 30px;
+  display: contents;
 }
 .contenido {
   grid-column: 2/3;
@@ -273,14 +273,37 @@ h2 {
   margin-right: 60px;
   color: aliceblue;
   font-size: large;
-  height: 90px;
   display: block;
-}
-}
-.imagen4 {
-  grid-column: 3/4;
-  grid-row: 2/3;
 }
 .titulo {
   text-align: center;
+  margin-bottom: 50px;
 }
+.listadoProductos {
+  display: flex;
+}
+.listado {
+  color: aliceblue;
+  margin-left: 8%;
+  margin-right: 7%;
+}
+.picture:hover,
+.picture1:hover {
+  border: 5px solid #7f0824;
+}
+.row .picture {
+  width: 100%;
+  height: 500px;
+}
+section .col-xs-12, 
+section .col-md-6, 
+section .col-lg-4 {
+  padding: 25px;
+}
+.container-fluid {
+  margin: 0 !important;
+}
+@mixin list-group-item-variant($state, $background, $color) {
+  .list-group-item-#{$state} {
+    color: ;
+    background-color: #7f0824;

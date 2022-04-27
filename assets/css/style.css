@@ -155,7 +155,6 @@ h2 {
   display: flex;
   margin-left: 20%;
 }
-}
 .datos {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -249,12 +248,12 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
-/* .menuDegustaciones {
+.menuDegustaciones {
   grid-column: 1/2;
   grid-row: 2/3;
   margin-top: 15px;
   height: fit-content;
-} */
+}
 .menuDegustaciones li:hover {
   transition: 1s;
   background-color: brown;
@@ -303,7 +302,3 @@ section .col-lg-4 {
 .container-fluid {
   margin: 0 !important;
 }
-@mixin list-group-item-variant($state, $background, $color) {
-  .list-group-item-#{$state} {
-    color: ;
-    background-color: #7f0824;

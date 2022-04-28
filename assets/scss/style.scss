@@ -1,0 +1,343 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+$color-background: #7f0824;
+$fuente-letra: 'Times New Roman', Times, serif;
+$color-letra: aliceblue;
+$margen-containerfluid: 0;
+
+body {
+    background-color: $color-background ;
+    font-family: $fuente-letra;
+    color: $color-letra;
+}
+.container-fluid {
+    margin: $margen-containerfluid;
+}
+div.nav {
+    li {
+        padding: 8px 10px;
+        border-radius: 3px;
+        &:hover {
+            background-color:rgb(75, 77, 77);
+            transition: 0.5s;
+        }
+    }
+}
+
+section {
+  justify-content: center;
+   img {
+     .row{
+       .picture{
+         padding: 25px;
+         width: 100%;
+         height: 500px;
+         &:hover {
+           border: solid;
+           margin: 3px;
+           background-color: $color-background;
+         }
+       }
+     }
+   }
+ }
+
+.envase {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(5 1fr);
+} 
+.envaseContacto {
+  display: grid;
+  grid-template-columns: 0.5fr 1.4fr 1.1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.2fr;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.envase .header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+}
+.envaseContacto .header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.envaseProductos {
+  grid-template-rows: repeat(5 1fr);
+}
+.envaseProductos .header {
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.envase .nav {
+  grid-column: 1/3;
+}
+.envaseContacto .nav {
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+.envaseProductos .nav {
+  grid-row: 2/3;
+  display: inline;
+  text-align: center;
+}
+.envaseProductos .nav ul {
+  color: aliceblue;
+}
+.menuContacto {
+  display: flex;
+  width: 50px;
+  height: 100px;
+}
+.menuContacto li:hover {
+  transition: 1s;
+  background-color: brown;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 2px;
+}
+.contacto1 {
+  display: inline-block;
+  color: aliceblue;
+  line-height: 1px;
+}
+.envase .nav ul {
+  display: inline;
+  justify-content:space-evenly;
+}
+.menuInicio{
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+/* li {
+  display: inline-flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  width: max-content;
+} */
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.nav li {
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+.nav li:hover {
+  background-color: $color-background;
+  transition: 0.5s;
+}
+.botonMenu {
+color: aliceblue;
+background: none;
+border: none;
+font-size: 40px;
+padding-left: 50px;
+display: none;
+}
+/* 
+@media screen and (max-width: 500px) {
+.envaseIndex {
+  width: 90%;
+  grid-row: 1/5;
+} */
+.envaseProductos{
+  width: 90%;
+  grid-row: 1/6;
+}
+.envase .header,
+.envaseProductos .header {
+  grid-row: 1/2;
+}
+.envase .nav,
+.envaseProductos .nav {
+  grid-row: 2/3;
+  display: contents;
+}
+/* .envase .imagenes {
+  grid-row: 3/4;
+  display: inline-block;
+  max-height: 100%;
+}
+.envaseProductos .imagenes {
+  grid-row: 4/5;
+  display: contents;
+  max-height: 100%;
+} */
+/* .envase .imagenes .imagen1,
+.envase .imagenes .imagen2,
+.envase .imagenes .imagen3,
+.envaseProductos .imagenes .imagen1,
+.envaseProductos .imagenes .imagen2,
+.envaseProductos .imagenes .imagen3 {
+  width: 300px;
+  height: 250px;
+} */
+h2 {
+  grid-row: 3/4;
+  display: flex;
+  margin-left: 20%;
+}
+.datos {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+h1 {
+  display: flex;
+  color: aliceblue;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.contacto2 .liContacto {
+  display: block;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+.contacto2 {
+  display: block;
+  margin-bottom: 40px;
+}
+.iframe {
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.mapa {
+  display: flex;
+  margin-right: 100px;
+}
+.formulario {
+  display: grid;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  height: 200px;
+  width: 200px;
+  margin-right: 25px;
+}
+.liFormulario {
+  display: block;
+  color: aliceblue;
+  font-size: small;
+  margin-bottom: 3%;
+  text-align: inherit;
+}
+/* .imagenes {
+  display: flex;
+  gap: 1px;
+  flex-wrap: wrap;
+} */
+/* .imagenes .imagen1 {
+  grid-column: 1/2;
+}
+.imagenes .imagen2 {
+  grid-column: 2/3;
+}
+.imagenes .imagen3 {
+  grid-column: 3/4;
+} */
+.pie {
+  grid-row: 4/5;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.pieContacto {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+}
+.pieDegustaciones {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  height: fit-content;
+  text-align: center;
+  margin-top: 40px;
+}
+/* .envaseDegustaciones {
+  display: grid;
+  grid-template-columns: 0.3 fr 0.5fr 0.3fr;
+  grid-template-rows: 0.8fr 0.5fr 0.2fr;
+  gap: 5px;
+  margin-right: 50px;
+} */
+.envaseDegustaciones .header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.menuDegustaciones {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 15px;
+  height: fit-content;
+}
+.menuDegustaciones li:hover {
+  transition: 1s;
+  background-color: brown;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 2px;
+}
+h2 {
+  color: aliceblue;
+  font-size: xx-large;
+  display: contents;
+}
+.contenido {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-right: 60px;
+  color: aliceblue;
+  font-size: large;
+  display: block;
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.listadoProductos {
+  display: flex;
+}
+.listado {
+  color: aliceblue;
+  margin-left: 8%;
+  margin-right: 7%;
+}
+.picture:hover,
+.picture1:hover {
+  border: 3px solid #7f0824;
+}
+.row .picture {
+  width: 100%;
+  height: 500px;
+}
+section .col-xs-12, 
+section .col-md-6, 
+section .col-lg-4 {
+  padding: 25px;
+}
+.container-fluid {
+  margin: 0 !important;
+}

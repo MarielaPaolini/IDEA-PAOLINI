@@ -1,13 +1,12 @@
-* {
-    margin: 0%;
-    padding: 0%;
-}
-
 $color-background: #7f0824;
 $fuente-letra: 'Times New Roman', Times, serif;
 $color-letra: aliceblue;
 $margen-containerfluid: 0;
 
+* {
+    margin: 0%;
+    padding: 0%;
+}
 body {
     background-color: $color-background ;
     font-family: $fuente-letra;
@@ -45,6 +44,58 @@ section {
    }
  }
 
+@mixin titulos-principales {
+  display: flex;
+  color: aliceblue;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  @include titulos-principales
+}
+
+$lista-formulario: (
+  colorLetra: aliceblue,
+  tfuente: small,
+  margenInferior: 3px,
+  alineacion: inherit,
+  disposicion: grid,
+  alto: 80px,
+  ancho: 100%,
+  margenDerecho: 25px,
+);
+.liFormulario,
+.formulario {
+  color: map-get($lista-formulario, colorLetra);
+  font-size: map-get($lista-formulario, tfuente);
+  margin-bottom: map-get($lista-formulario, margenInferior);
+  text-align: map-get($lista-formulario, alineacion);
+  display: map-get($lista-formulario, disposicion);
+  height: map-get($lista-formulario, alto);
+  width: map-get($lista-formulario, ancho);
+  margin-right: map-get($lista-formulario, margenDerecho);
+}
+%piePaginas_extends {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+}
+.pie {
+  @extend %piePaginas_extends;
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.pieContacto {
+  @extend %piePaginas_extends;
+}
+.pieDegustaciones {
+  @extend %piePaginas_extends;
+  height: fit-content;
+  text-align: center;
+  margin-top: 40px;
+
 .envase {
     width: 100%;
     display: grid;
@@ -52,9 +103,6 @@ section {
     grid-template-rows: repeat(5 1fr);
 } 
 .envaseContacto {
-  display: grid;
-  grid-template-columns: 0.5fr 1.4fr 1.1fr;
-  grid-template-rows: 0.1fr 0.1fr 0.1fr 0.2fr;
   min-height: 100vh;
   width: 100%;
   align-items: center;
@@ -62,24 +110,16 @@ section {
   margin-right: 0%;
 }
 .envase .header {
-  grid-column: 1/3;
-  grid-row: 1/2;
   width: 100%;
   display: flex;
   justify-content:space-evenly;
 }
 .envaseContacto .header {
-  grid-column: 1/4;
-  grid-row: 1/2;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-.envaseProductos {
-  grid-template-rows: repeat(5 1fr);
-}
 .envaseProductos .header {
-  grid-row: 1/2;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -87,12 +127,7 @@ section {
 .envase .nav {
   grid-column: 1/3;
 }
-.envaseContacto .nav {
-  grid-column: 1/2;
-  grid-row: 2/4;
-}
 .envaseProductos .nav {
-  grid-row: 2/3;
   display: inline;
   text-align: center;
 }
@@ -120,17 +155,13 @@ section {
   display: inline;
   justify-content:space-evenly;
 }
-.menuInicio{
-  justify-content: space-around;
+.menuInicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 20px;
+  width: 100%;
 }
-/* li {
-  display: inline-flex;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 50px;
-  width: max-content;
-} */
 a {
   color: aliceblue;
   text-decoration: none;
@@ -159,50 +190,13 @@ display: none;
 } */
 .envaseProductos{
   width: 90%;
-  grid-row: 1/6;
 }
-.envase .header,
-.envaseProductos .header {
-  grid-row: 1/2;
-}
-.envase .nav,
-.envaseProductos .nav {
-  grid-row: 2/3;
-  display: contents;
-}
-/* .envase .imagenes {
-  grid-row: 3/4;
-  display: inline-block;
-  max-height: 100%;
-}
-.envaseProductos .imagenes {
-  grid-row: 4/5;
-  display: contents;
-  max-height: 100%;
-} */
-/* .envase .imagenes .imagen1,
-.envase .imagenes .imagen2,
-.envase .imagenes .imagen3,
-.envaseProductos .imagenes .imagen1,
-.envaseProductos .imagenes .imagen2,
-.envaseProductos .imagenes .imagen3 {
-  width: 300px;
-  height: 250px;
-} */
 h2 {
-  grid-row: 3/4;
   display: flex;
   margin-left: 20%;
 }
 .datos {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-h1 {
-  display: flex;
-  color: aliceblue;
-  font-size: 25px;
-  margin-bottom: 20px;
+  display: contents;
 }
 .contacto2 .liContacto {
   display: block;
@@ -222,74 +216,13 @@ h1 {
   display: flex;
   margin-right: 100px;
 }
-.formulario {
-  display: grid;
-  grid-column: 3/4;
-  grid-row: 2/3;
-  height: 200px;
-  width: 200px;
-  margin-right: 25px;
 }
-.liFormulario {
-  display: block;
-  color: aliceblue;
-  font-size: small;
-  margin-bottom: 3%;
-  text-align: inherit;
-}
-/* .imagenes {
-  display: flex;
-  gap: 1px;
-  flex-wrap: wrap;
-} */
-/* .imagenes .imagen1 {
-  grid-column: 1/2;
-}
-.imagenes .imagen2 {
-  grid-column: 2/3;
-}
-.imagenes .imagen3 {
-  grid-column: 3/4;
-} */
-.pie {
-  grid-row: 4/5;
-  display: flex;
-  justify-content: center;
-  color: aliceblue;
-  margin-left: 70px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-.pieContacto {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  display: flex;
-  justify-content: center;
-}
-.pieDegustaciones {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  height: fit-content;
-  text-align: center;
-  margin-top: 40px;
-}
-/* .envaseDegustaciones {
-  display: grid;
-  grid-template-columns: 0.3 fr 0.5fr 0.3fr;
-  grid-template-rows: 0.8fr 0.5fr 0.2fr;
-  gap: 5px;
-  margin-right: 50px;
-} */
 .envaseDegustaciones .header {
-  grid-column: 1/4;
-  grid-row: 1/2;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 .menuDegustaciones {
-  grid-column: 1/2;
-  grid-row: 2/3;
   margin-top: 15px;
   height: fit-content;
 }
@@ -306,8 +239,6 @@ h2 {
   display: contents;
 }
 .contenido {
-  grid-column: 2/3;
-  grid-row: 2/3;
   margin-right: 60px;
   color: aliceblue;
   font-size: large;
